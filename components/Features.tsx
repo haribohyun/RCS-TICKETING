@@ -224,7 +224,7 @@ const Features: React.FC = () => {
           {/* Header Section */}
           <div className="relative z-10 mb-4 flex justify-between items-start min-h-[48px]">
             <div className="flex-1 pr-4">
-                <h3 className="text-2xl font-bold text-[#276df1] mb-1">
+                <h3 className="text-2xl font-bold text-[#D8B4FE] mb-1">
                     {reserveStage === 'intro' ? '티켓 예매' : 
                      reserveStage === 'form' ? '정보를 알려주세요' :
                      reserveStage === 'countSelection' ? '몇 장을 예매할까요?' :
@@ -290,7 +290,7 @@ const Features: React.FC = () => {
                 </button>
                 <button 
                     onClick={handleStartTicket}
-                    className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
+                    className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
                 >
                     티켓 예매 시작하기
                 </button>
@@ -327,7 +327,7 @@ const Features: React.FC = () => {
                 <button 
                     disabled={!isFormValid || isSubmitting} 
                     onClick={handleGoToCount} 
-                    className={`w-full py-4 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg ${isFormValid && !isSubmitting ? 'bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] hover:bg-[#276df1] active:scale-[0.98]' : 'bg-gray-800 text-gray-500 cursor-not-allowed'}`}
+                    className={`w-full py-4 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg ${isFormValid && !isSubmitting ? 'bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] hover:bg-[#D8B4FE] active:scale-[0.98]' : 'bg-gray-800 text-gray-500 cursor-not-allowed'}`}
                 >
                    다음단계
                 </button>
@@ -354,7 +354,7 @@ const Features: React.FC = () => {
              <div className="mt-8 w-full">
                 <button 
                     onClick={handleCheckBeforeConfirm} 
-                    className={`w-full py-4 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] hover:bg-[#276df1] active:scale-[0.98]`}
+                    className={`w-full py-4 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] hover:bg-[#D8B4FE] active:scale-[0.98]`}
                 >
                    {isSubmitting ? (
                         <Loader2 className="w-5 h-5 animate-spin" />
@@ -402,7 +402,7 @@ const Features: React.FC = () => {
                 <button 
                   onClick={handleFinalSubmit} 
                   disabled={isSubmitting} 
-                  className={`flex-1 py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl flex items-center justify-center active:scale-[0.98] transition-all relative overflow-hidden shadow-lg hover:bg-[#276df1] ${!isSubmitting ? 'gap-2' : ''}`}
+                  className={`flex-1 py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl flex items-center justify-center active:scale-[0.98] transition-all relative overflow-hidden shadow-lg hover:bg-[#D8B4FE] ${!isSubmitting ? 'gap-2' : ''}`}
                 >
                     {isSubmitting ? (
                       <Loader2 className="w-5 h-5 animate-spin" />
@@ -461,7 +461,7 @@ const Features: React.FC = () => {
                     } else {
                         setShowCopyWarning(true);
                     }
-                }} className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all shadow-lg active:scale-[0.98]">
+                }} className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all shadow-lg active:scale-[0.98]">
                     입금 완료했어요
                 </button>
              </div>
@@ -489,7 +489,7 @@ const Features: React.FC = () => {
 
              </div>
              <div className="mt-8 w-full">
-                <button onClick={() => setReserveStage('intro')} className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all shadow-lg active:scale-[0.98]">
+                <button onClick={() => setReserveStage('intro')} className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all shadow-lg active:scale-[0.98]">
                     내 티켓 발급하러 가기
                 </button>
              </div>
@@ -528,7 +528,7 @@ const Features: React.FC = () => {
 
              </div>
              <div className="mt-8 w-full shrink-0">
-                <button onClick={() => setReserveStage('intro')} className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all shadow-lg active:scale-[0.98]">
+                <button onClick={() => setReserveStage('intro')} className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all shadow-lg active:scale-[0.98]">
                     내 티켓 발급하러 가기
                 </button>
              </div>
@@ -547,7 +547,7 @@ const Features: React.FC = () => {
                     </div>
                     <div className="space-y-1.5">
                         <label className="text-xs font-semibold text-white/70">연락처 뒷번호 4자리</label>
-                        <input type="tel" maxLength={4} placeholder="1234" value={lookupData.phone} onChange={(e) => setLookupData(prev => ({...prev, phone: e.target.value.replace(/[^0-9]/g, '')}))} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-sm text-white tracking-widest focus:outline-none placeholder-gray-500" />
+                        <input type="tel" maxLength={4} placeholder="1234" value={lookupData.phone} onChange={(e) => setLookupData(prev => ({...prev, phone: e.target.value.replace(/[^0-9]/g, ''))} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-sm text-white tracking-widest focus:outline-none placeholder-gray-500" />
                     </div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4 flex gap-3">
@@ -556,7 +556,7 @@ const Features: React.FC = () => {
                 </div>
              </div>
              <div className="mt-8 w-full">
-                <button onClick={handleLookup} className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 hover:bg-[#276df1] active:scale-[0.98]">
+                <button onClick={handleLookup} className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl shadow-lg flex items-center justify-center gap-2 hover:bg-[#D8B4FE] active:scale-[0.98]">
                     정보 확인하기 <ChevronRight className="w-4 h-4" />
                 </button>
              </div>
@@ -642,7 +642,7 @@ const Features: React.FC = () => {
                 )}
              </div>
              <div className="mt-3 w-full shrink-0">
-                <button onClick={() => setReserveStage('intro')} className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all shadow-lg active:scale-[0.98]">
+                <button onClick={() => setReserveStage('intro')} className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all shadow-lg active:scale-[0.98]">
                     닫기
                 </button>
              </div>
@@ -659,7 +659,7 @@ const Features: React.FC = () => {
                 {/* Header - Matches Reserve Card Style */}
                 <div className="relative z-10 mb-4 flex justify-between items-start min-h-[48px] shrink-0">
                     <div className="flex-1 pr-4">
-                        <h3 className="text-2xl font-bold text-[#276df1] mb-1">공연 정보</h3>
+                        <h3 className="text-2xl font-bold text-[#D8B4FE] mb-1">공연 정보</h3>
                         <p className="text-sm font-medium text-gray-400">밴드 공연 | 180분</p>
                     </div>
                 </div>
@@ -707,7 +707,7 @@ const Features: React.FC = () => {
                 <div className="mt-auto w-full shrink-0">
                     <button 
                         onClick={() => setInfoStage('map')}
-                        className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all shadow-lg active:scale-[0.98]"
+                        className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all shadow-lg active:scale-[0.98]"
                     >
                         찾아오시는 길
                     </button>
@@ -717,7 +717,7 @@ const Features: React.FC = () => {
            {/* Stage 2: Map View */}
            <div className={`absolute inset-0 top-0 p-10 flex flex-col h-full w-full transition-all duration-500 ease-in-out ${infoStage === 'map' ? 'opacity-100 translate-x-0 z-10' : (infoStage === 'info' ? 'opacity-0 translate-x-10 pointer-events-none' : 'opacity-0 -translate-x-10 pointer-events-none')}`}>
               <div className="flex items-center justify-between mb-4 shrink-0">
-                  <h3 className="text-xl font-bold text-[#276df1]">찾아오시는 길</h3>
+                  <h3 className="text-xl font-bold text-[#D8B4FE]">찾아오시는 길</h3>
                   <button 
                       onClick={() => setInfoStage('info')}
                       className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors shrink-0"
@@ -737,7 +737,7 @@ const Features: React.FC = () => {
               <div className="w-full shrink-0">
                   <button 
                       onClick={() => setInfoStage('parking')}
-                      className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
+                      className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
                   >
                       주차 위치 확인하기
                   </button>
@@ -747,7 +747,7 @@ const Features: React.FC = () => {
           {/* Stage 3: Parking View */}
           <div className={`absolute inset-0 top-0 p-10 flex flex-col h-full w-full transition-all duration-500 ease-in-out ${infoStage === 'parking' ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-10 pointer-events-none'}`}>
               <div className="flex items-center justify-between mb-6 shrink-0">
-                  <h3 className="text-xl font-bold text-[#276df1]">공영 주차장 안내</h3>
+                  <h3 className="text-xl font-bold text-[#D8B4FE]">공영 주차장 안내</h3>
                   <button 
                       onClick={() => setInfoStage('map')}
                       className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors shrink-0"
@@ -787,7 +787,7 @@ const Features: React.FC = () => {
               </div>
               
               <div className="mt-6 w-full shrink-0">
-                   <button onClick={() => setInfoStage('info')} className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all shadow-lg active:scale-[0.98]">
+                   <button onClick={() => setInfoStage('info')} className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all shadow-lg active:scale-[0.98]">
                       돌아가기
                    </button>
               </div>
@@ -798,7 +798,7 @@ const Features: React.FC = () => {
         <div id="members-card" className="order-4 md:order-4 group relative bg-zinc-900/60 backdrop-blur-md border border-white/10 rounded-[40px] p-10 overflow-hidden hover:border-white/20 transition-all duration-500 min-h-[500px] flex flex-col shadow-xl">
           <div className="relative z-10 mb-8">
             {/* CHANGED: text-xl -> text-2xl */}
-            <h3 className="text-2xl font-bold text-[#276df1] mb-6">밴드 구성원</h3>
+            <h3 className="text-2xl font-bold text-[#D8B4FE] mb-6">밴드 구성원</h3>
             <div className="space-y-2 text-sm text-white/80 font-medium leading-relaxed">
               <div className="flex items-start">
                   <span className="shrink-0">보컬 -&nbsp;</span>
@@ -828,7 +828,7 @@ const Features: React.FC = () => {
         <div id="playlist-card" className="order-5 md:order-5 group relative bg-zinc-900/60 backdrop-blur-md border border-white/10 rounded-[40px] p-10 overflow-hidden hover:border-white/20 transition-all duration-500 min-h-[500px] flex flex-col shadow-xl">
           <div className="relative z-10 w-full mb-10">
             {/* CHANGED: text-xl -> text-2xl */}
-            <h3 className="text-2xl font-bold text-[#276df1] mb-8">플레이 리스트</h3>
+            <h3 className="text-2xl font-bold text-[#D8B4FE] mb-8">플레이 리스트</h3>
             <div className="flex flex-col gap-8 text-sm text-white/80 font-medium leading-relaxed">
               <div>
                 <span className="text-white font-black text-lg block mb-2">SET.1</span>

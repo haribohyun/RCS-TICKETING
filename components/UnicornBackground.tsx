@@ -50,41 +50,50 @@ const UnicornBackground: React.FC<UnicornBackgroundProps> = ({
         }}
       />
 
-      {/* Apple Music Style Player UI */}
+      {/* Bottom Sheet Card Style UI */}
       <div 
-        className={`absolute bottom-0 w-full px-6 pb-12 pt-12 md:pb-16 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent transition-opacity duration-300 ${playerOpacity <= 0.05 ? 'pointer-events-none' : 'pointer-events-auto'}`}
-        style={{ opacity: playerOpacity }}
+        className={`absolute bottom-0 w-full transition-transform duration-500 ease-out ${playerOpacity <= 0.05 ? 'translate-y-full' : 'translate-y-0'}`}
+        style={{ opacity: playerOpacity > 0.05 ? 1 : 0, pointerEvents: playerOpacity <= 0.05 ? 'none' : 'auto' }}
       >
-        <div className="max-w-xl mx-auto w-full flex flex-col gap-6 md:gap-8">
+        {/* Card Container */}
+        {/* Updated width to w-[calc(100%-3rem)] to match the px-6 (1.5rem * 2) margins of Features.tsx */}
+        <div className="w-[calc(100%-3rem)] md:w-[calc(100%-6rem)] max-w-2xl mx-auto bg-[#111111] border-t border-x border-white/10 rounded-t-[36px] px-8 pt-8 pb-10 shadow-2xl relative overflow-hidden">
             
-            {/* Header Section replaced with simple text */}
-            <div className="flex flex-col items-center justify-center px-1 gap-1">
-                 <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#276df1]/80 uppercase">
-                    26.02.14 SAT | 16:00
-                 </span>
-                 <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#276df1]/80 uppercase">
-                    赤玉春 VOL.2
-                 </span>
-            </div>
+            {/* Inner Top Highlight */}
+            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-70" />
+            
+            <div className="relative z-10 flex flex-col gap-6">
+                 
+                 {/* Title / Info Row */}
+                 <div className="flex flex-col gap-1">
+                     <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#D8B4FE] uppercase">
+                        2026.02.14 SAT | 16:00
+                     </span>
+                     <h3 className="text-xl font-bold text-white">
+                        赤玉春 VOL.2
+                     </h3>
+                 </div>
 
-            <div className="flex flex-col items-center justify-center pt-4 w-full gap-3">
-                
-                {/* Performance Info Button - Updated to match 'Already Reserved' button style */}
-                <button 
-                    onClick={onMoreClick}
-                    className="w-full py-4 bg-zinc-800 text-white border border-white/10 text-sm font-bold rounded-xl hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 shadow-sm active:scale-[0.98]"
-                >
-                    공연 정보 확인하기
-                </button>
+                 {/* Buttons Group */}
+                 <div className="flex flex-col gap-3 w-full">
+                    
+                    {/* Performance Info Button */}
+                    <button 
+                        onClick={onMoreClick}
+                        className="w-full py-4 bg-zinc-800/80 hover:bg-zinc-800 text-white border border-white/10 text-sm font-bold rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
+                    >
+                        공연 정보 확인하기
+                    </button>
 
-                {/* Reservation Start Button */}
-                <button 
-                    onClick={onPlayClick}
-                    className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
-                >
-                    예매 시작하기
-                </button>
+                    {/* Reservation Start Button */}
+                    <button 
+                        onClick={onPlayClick}
+                        className="w-full py-4 bg-[#D8B4FE] text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#C094F0] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#D8B4FE]/20 active:scale-[0.98]"
+                    >
+                        예매 시작하기
+                    </button>
 
+                 </div>
             </div>
         </div>
       </div>
