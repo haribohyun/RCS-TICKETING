@@ -547,7 +547,7 @@ const Features: React.FC = () => {
                     </div>
                     <div className="space-y-1.5">
                         <label className="text-xs font-semibold text-white/70">연락처 뒷번호 4자리</label>
-                        <input type="tel" maxLength={4} placeholder="1234" value={lookupData.phone} onChange={(e) => setLookupData(prev => ({...prev, phone: e.target.value.replace(/[^0-9]/g, ''))} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-sm text-white tracking-widest focus:outline-none placeholder-gray-500" />
+                        <input type="tel" maxLength={4} placeholder="1234" value={lookupData.phone} onChange={(e) => setLookupData(prev => ({...prev, phone: e.target.value.replace(/[^0-9]/g, '')}))} className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-sm text-white tracking-widest focus:outline-none placeholder-gray-500" />
                     </div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4 flex gap-3">
