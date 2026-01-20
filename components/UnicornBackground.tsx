@@ -59,10 +59,10 @@ const UnicornBackground: React.FC<UnicornBackgroundProps> = ({
             
             {/* Header Section replaced with simple text */}
             <div className="flex flex-col items-center justify-center px-1 gap-1">
-                 <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#D8B4FE]/80 uppercase">
+                 <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#276df1]/80 uppercase">
                     26.02.14 SAT | 16:00
                  </span>
-                 <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#D8B4FE]/80 uppercase">
+                 <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#276df1]/80 uppercase">
                     赤玉春 VOL.2
                  </span>
             </div>
@@ -80,7 +80,7 @@ const UnicornBackground: React.FC<UnicornBackgroundProps> = ({
                 {/* Reservation Start Button */}
                 <button 
                     onClick={onPlayClick}
-                    className="w-full py-4 bg-[#D8B4FE]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#D8B4FE] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
+                    className="w-full py-4 bg-[#276df1]/80 backdrop-blur-md text-[#1A1A1A] text-sm font-bold rounded-xl hover:bg-[#276df1] transition-all flex items-center justify-center gap-2 shadow-lg active:scale-[0.98]"
                 >
                     예매 시작하기
                 </button>
