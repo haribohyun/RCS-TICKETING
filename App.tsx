@@ -55,7 +55,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="relative w-full min-h-screen bg-[#0a0a0a] text-[#F2EFE7]">
+    <main className="relative w-full min-h-screen bg-[#F7F5F0] text-stone-900">
       {/* Background Layer - Player Controls Navigation */}
       <UnicornBackground 
         onStarClick={handleEasterEggClick} 

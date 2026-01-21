@@ -1,22 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ArrowUp } from 'lucide-react';
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const lastScrollY = useRef(0);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      // Show button after scrolling down 100px
-      if (window.scrollY > 100) {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Clear any existing timeout to reset the inactivity timer
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      // Check if scrolling up
+      if (currentScrollY < lastScrollY.current && currentScrollY > 100) {
         setIsVisible(true);
-      } else {
+        
+        // Hide after 2 seconds of inactivity
+        timeoutRef.current = setTimeout(() => {
+          setIsVisible(false);
+        }, 2000);
+      } else if (currentScrollY > lastScrollY.current || currentScrollY <= 100) {
+        // Hide immediately if scrolling down or near top
         setIsVisible(false);
       }
+
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -34,10 +56,10 @@ const ScrollToTop: React.FC = () => {
     >
       <button
         onClick={scrollToTop}
-        className="group relative flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/10 shadow-lg hover:bg-white/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+        className="group relative flex items-center justify-center w-12 h-12 rounded-full bg-[#FFFEFA]/90 backdrop-blur-md border border-stone-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="w-5 h-5 text-white/80 group-hover:-translate-y-0.5 transition-transform duration-300" />
+        <ArrowUp className="w-5 h-5 text-stone-600 group-hover:-translate-y-0.5 transition-transform duration-300" />
       </button>
     </div>
   );

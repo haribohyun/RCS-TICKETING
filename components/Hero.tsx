@@ -60,10 +60,10 @@ const Hero: React.FC<HeroProps> = ({ dateText = "2026 . 02 . 14 . sat", messageT
             {/* Static Text */}
             <div className="flex flex-col items-center justify-end gap-1 mb-2">
                 <div className="flex flex-col items-center gap-1">
-                    <p className="text-[10px] md:text-xs font-medium tracking-widest text-[#D8B4FE]/80">
+                    <p className="text-[10px] md:text-xs font-medium tracking-widest text-[#1A1A1A]/60">
                         밸런타인데이 저녁
                     </p>
-                    <p className="text-[10px] md:text-xs font-medium tracking-widest text-[#D8B4FE]/80">
+                    <p className="text-[10px] md:text-xs font-medium tracking-widest text-[#1A1A1A]/60">
                         초콜릿 공장에 당신을 초대합니다!
                     </p>
                 </div>
@@ -72,7 +72,7 @@ const Hero: React.FC<HeroProps> = ({ dateText = "2026 . 02 . 14 . sat", messageT
             {/* Main Visual Image replacing Text Content */}
             <div className="relative flex flex-col items-center justify-center">
                 <img 
-                    src="https://i.postimg.cc/2jstJbq3/Gemini-Generated-Image-vvlvyyvvlvyyvvlv-removebg-preview.png"
+                    src="https://i.postimg.cc/fy7TfmPs/Gemini-Generated-Image-15hc9v15hc9v15hc-removebg-preview.png"
                     alt="Main Visual"
                     onClick={onImageClick}
                     className="w-full max-w-[260px] md:max-w-[420px] object-contain drop-shadow-sm opacity-95 animate-float-slow select-none cursor-pointer"
